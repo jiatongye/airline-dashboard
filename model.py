@@ -61,12 +61,10 @@ def train_model(model_type='rf', n_estimators=100, learning_rate=0.1, max_depth=
         elif model_type == 'mlp':
             model = MLPClassifier(
                 hidden_layer_sizes=hidden_layer_sizes,
-                max_iter=n_estimators,
-                learning_rate_init=learning_rate,
+                max_iter=300,
                 random_state=42,
                 early_stopping=True,
-                validation_fraction=0.1
-            )
+                validation_fraction=0.1)
         else:
             raise ValueError(f"Unknown model type: {model_type}")
         
