@@ -61,7 +61,7 @@ def train_model(model_type='rf', n_estimators=100, learning_rate=0.1, max_depth=
         elif model_type == 'mlp':
             model = MLPClassifier(
                 hidden_layer_sizes=hidden_layer_sizes,
-                max_iter=300,
+                max_iter=100,
                 random_state=42,
                 early_stopping=True,
                 validation_fraction=0.1)
